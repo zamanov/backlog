@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @story.name
+%p
+  %b Rank:
+  = @story.rank
+%p
+  %b Points:
+  = @story.points
+%p
+  %b Title:
+  = @story.title
+%p
+  %b Notes:
+  = @story.notes
+
+= link_to 'Edit', edit_story_path(@story)
+\|
+= link_to 'Back', stories_path
