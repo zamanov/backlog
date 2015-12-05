@@ -17,7 +17,5 @@
   = @story.notes
 
 = link_to 'Edit', edit_story_path(@story)
-= link_to 'Destroy', @story, :method => :delete
-= link_to 'Split', split_story_path(@story)
 \|
 = link_to 'Back', stories_path

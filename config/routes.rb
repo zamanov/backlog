@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :stories
+  resources :stories do
+    member do
+      get :split
+    end
+  end
+  post 'stories/:id/split' => 'stories#share'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
