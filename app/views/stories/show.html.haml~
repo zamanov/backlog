@@ -1,5 +1,7 @@
-%p#notice= notice
 
+%p
+  %b ID:
+  = @story.id
 %p
   %b Name:
   = @story.name
@@ -15,9 +17,11 @@
 %p
   %b Notes:
   = @story.notes
-
-= link_to 'Edit', edit_story_path(@story)
-= link_to 'Destroy', @story, :method => :delete
-= link_to 'Split', split_story_path(@story)
+- if can? :update, story
+  = link_to 'Edit', edit_story_path(@story)
+- if can? :destroy, story
+  = link_to 'Destroy', @story, :method => :delete
+- if can? :share, story
+  = link_to 'Split', split_story_path(@story)
 \|
 = link_to 'Back', stories_path
