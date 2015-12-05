@@ -1,7 +1,6 @@
 # backlog
 сначала делаете git clone
-затем в папке выполняем
-rake db:migrate
+затем в папке rake db:migrate
 rake db:seed
 логин админа(продукт овнера):
 admin@mail.com
