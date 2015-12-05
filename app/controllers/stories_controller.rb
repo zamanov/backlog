@@ -43,17 +43,17 @@ class StoriesController < ApplicationController
   def share
     isFull = true
     params["stories_hash"].each do |story|
-      if Story.new(story_params(story)).invalid?
+      if Story.new(story_hash_params(story)).invalid?
         isFull = false
       end
     end
     if isFull
       params["stories_hash"].each do |story|
-        Story.create(story_params(story))
+        Story.create(story_hash_params(story))
       end
       @story.destroy
       redirect_to '/stories'
-    else  
+    else
       redirect_to '/stories', notice: 'Bad data.'
     end
   end
@@ -82,6 +82,10 @@ class StoriesController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def story_params
     params.require(:story).permit(:name, :rank, :points, :title, :notes)
+  end
+
+  def story_hash_params(params)
+    params.permit(:name, :rank, :points, :title, :notes)
   end
 
 end

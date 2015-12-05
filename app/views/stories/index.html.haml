@@ -3,6 +3,7 @@
 %table
   %thead
     %tr
+      %th ID
       %th Name
       %th Rank
       %th Points
@@ -13,6 +14,7 @@
   %tbody
     - @stories.each do |story|
       %tr
+        %td= story.id
         %td= story.name
         %td= story.rank
         %td= story.points

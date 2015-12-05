@@ -3,12 +3,13 @@
 %table
   %thead
     %tr
+      %th ID
       %th Name
       %th Rank
       %th Points
       %th Title
       %th Notes
-      %td= link_to 'Show', story
+      %th
 
   %tbody
     - @stories.each do |story|
@@ -18,7 +19,7 @@
         %td= story.points
         %td= story.title
         %td= story.notes
-
+        %td= link_to 'Show', story
 %br
 
 = link_to 'New Story', new_story_path
