@@ -6,7 +6,7 @@ class StoriesController < ApplicationController
   # GET /stories
   # GET /stories.json
   def index
-    @stories = Story.all
+    @stories = Story.order("rank")
   end
 
   # GET /stories/1
