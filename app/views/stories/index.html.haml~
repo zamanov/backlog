@@ -1,14 +1,15 @@
 %h1 Listing stories
-
-%table
-  %thead
+%link{:href => "css/style.css",:rel => :stylesheet, :type => :"text/css"}
+%table{:class => "backlog_table"}
+  %thead{:class => "backlog_head"}
     %tr
-      %th ID
-      %th Name
-      %th Rank
-      %th Points
-      %th Title
-      %th Notes
+      %th{:class => "backlog_table_hide"}
+      %th{:class => "backlog_table_head"} ID
+      %th{:class => "backlog_table_head"} Name
+      %th{:class => "backlog_table_head"} Rank
+      %th{:class => "backlog_table_head"} Points
+      %th{:class => "backlog_table_head"} Title
+      %th{:class => "backlog_table_head"} Notes
       %th
 
   %tbody
