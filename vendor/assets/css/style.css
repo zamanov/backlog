@@ -1,0 +1,138 @@
+body{
+	background-color: white;
+	margin: 0;
+}
+
+.wrapper{
+	width: 100%;
+	height: 1200px;  
+}
+
+.top{
+	height: 300px;
+	width: 100%;		
+}
+
+.header_img{
+	height: 150px;
+	width: 100%;
+	background-color: #50312c;  
+}
+
+table.menu{
+	width: 100%;
+	background-color: #50312c;  
+	padding-bottom:5px;
+
+}
+
+table.menu th ,
+table.menu tr{
+	text-align: center;
+	font-family: "Verdana", sanf-selif;
+	font-size: 18px;
+	color: white;
+}
+
+table.menu th a,
+table.menu tr a{
+	text-decoration: none;
+	color: white;
+} 
+
+
+.backlog_buttons{
+	width: 100%;
+	margin-left: 10px;
+	padding-top:10px;
+	padding-right:10px;
+}
+
+table.backlog_table{
+	
+	width: 100%;
+	padding-left: 5px;
+	padding-right: 20px;
+	text-align: center;
+	font-family: "Verdana", sanf-selif;
+	font-size: 14px;
+	border-spacing: 5px;
+	background-color: #7e4e45;
+}
+
+.add_picture{
+	padding-left:10px;
+}
+.delete_picture{
+	padding-left:10px;
+}
+
+.edit_picture{
+	padding-left:10px;
+}
+.split_picture{
+	padding-left:10px;
+}
+.watch_picture{
+	padding-left:500px;
+}
+
+/*table.backlog_table thead tr,
+table.backlog_table thead td{
+	color: white;
+	font-size: 14px;  
+	height: 35px;
+}*/
+
+
+.backlog_buttons{
+	height: 100px;
+	width: 100%;
+	background-color: white;
+	
+}
+
+
+.backlog_table_hide{
+	background-color: #7e4e45;
+}
+
+.backlog_table_cell{
+	background-color: #f2e8e6;
+	color: #50312c;
+}
+
+.backlog_table_radio{
+	background-color: #50312c;
+	width: 100px;
+}
+
+.backlog_table_head{
+	background-color: #50312c;
+	font-size: 14px;  
+	height: 35px;
+	color: white;
+}
+
+.backlog_table_cell_2{
+	background-color: #be8f87;
+}
+
+.backlog_table_cell_1{
+	background-color: #d9bcb7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

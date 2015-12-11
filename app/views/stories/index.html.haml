@@ -1,26 +1,43 @@
-%h1 Listing stories
-
-%table
-  %thead
-    %tr
-      %th ID
-      %th Name
-      %th Rank
-      %th Points
-      %th Title
-      %th Notes
-      %th
-
-  %tbody
-    - @stories.each do |story|
+.wrapper
+  .top
+    .header_img1
+      %table{:class => "menu"}
+        %tr
+          %td{:class => "title1"} main page
+          %td{:class => "title1"} product backlog
+          %td{:class => "title1"} scrum backlog
+          %td{:class => "title1"} burndown diagram
+    .backlog_buttons
+      %image{:class => "add_picture", :name => "add", :src => "http://upload.akusherstvo.ru/image899656.jpg"}
+      %image{:class => "delete_picture", :name => "delete", :src => "http://upload.akusherstvo.ru/image899657.jpg"}
+      %img{:class => "edit_picture", :name => "edit", :src => "http://upload.akusherstvo.ru/image899658.jpg"}
+      %img{:class => "split_picture", :name => "split", :src => "http://upload.akusherstvo.ru/image899659.jpg"}
+      %img{:class => "watch_picture", :name => "watch", :src => "http://upload.akusherstvo.ru/image899660.jpg"}
+  %table{:class => "backlog_table"}
+    %thead{:class => "backlog_head"}
       %tr
-        %td= story.id
-        %td= story.name
-        %td= story.rank
-        %td= story.points
-        %td= story.title
-        %td= story.notes
-        %td= link_to 'Show', story
-%br
-- if can? :create, Story
-  = link_to 'New Story', new_story_path
+        %th{:class => "backlog_table_head"} #
+        %th{:class => "backlog_table_head"} ID
+        %th{:class => "backlog_table_head"} Name
+        %th{:class => "backlog_table_head"} Priority
+        %th{:class => "backlog_table_head"} Mark
+        %th{:class => "backlog_table_head"} Way of demonstration
+        %th{:class => "backlog_table_head"} Notes
+        %th
+
+    %tbody
+      - @stories.each do |story|
+        %tr
+          %td{:class => "backlog_table_radio"}
+            %input{:type => "radio", :name => "raz"}
+          %td{:class => "backlog_table_cell"}= story.id
+          %td{:class => "backlog_table_cell"}= story.name
+          %td{:class => "backlog_table_cell"}= story.rank
+          %td{:class => "backlog_table_cell"}= story.points
+          %td{:class => "backlog_table_cell"}= story.title
+          %td{:class => "backlog_table_cell"}= story.notes
+          %td{:class => "backlog_table_cell"}= link_to 'Show', story
+
+      %br
+        - if can? :create, Story
+          = link_to 'New Story', new_story_path

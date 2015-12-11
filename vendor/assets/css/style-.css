@@ -1,0 +1,104 @@
+body{
+	font-family: "Verdana", sanf-selif;
+	font-size: 14px;
+	background-color: yellow;
+}
+
+.wrapper{
+	margin: 2px 2px 0 2px; 
+	width: 1000px;
+	height: 1000px;
+}
+
+img.header_img {
+	height: 175px;
+	width: 100%
+}
+ 
+.main {
+	margin: 20px 80px 20px 80px;
+	height: 600px;
+} 
+
+.sidebar{
+	width:210px;
+	height:600px;
+	float:left;
+}
+
+.menu {
+	background-image: url(../img/menu.jpg);
+	width:210px;
+	height:240px;
+}
+
+ul.menu_list{
+	padding:30px 30px 30px 25px;
+	list-style-type: none;
+}
+
+ul.menu_list li{
+	padding:7px;
+}
+
+ul.menu_list li a{
+	font-size: 14px;
+	/*color: #ECD44F;*/
+	color: red;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.menu li a:hover {
+	color: #8F7B26;
+}
+
+.bar{
+	background-image: url(../img/bar.jpg);
+	margin-top:40px;
+	width:160px;
+	height:320px;
+	padding: 10px 30px 0 25px;
+	font-size: 16px;
+	color:#A5A989;	
+	font-weight: bold;
+}
+
+.imgButton{
+	padding-top: 10px;
+}
+
+img.picture{
+	width:140px;
+	height:190px;
+}
+
+
+.content{
+	background-image: url(../img/content.jpg);
+	margin:20px 50px 0 250px;
+	padding: 40px 50px 20px 30px; 
+	height:600px;
+	width:540px;
+	font-size: 14px;
+	color:#A5A989;	
+}
+
+table.backlog_table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+table.backlog_table th,
+table.backlog_table td {
+	text-align: left;
+	padding: 5px 5px 5px 5px;
+	border: 1px solid grey;
+}
+
+img.bottom{
+	margin-top:20px;
+	height:200px;
+}
+ 

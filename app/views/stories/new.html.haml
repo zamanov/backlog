@@ -1,5 +1,10 @@
-%h1 New story
+.wrapper
+  .top
+    .header_img
+      %table{:class => "menu"}
+        %tr
+          %td{:class => "menu_td"} New story
 
-= render 'form'
+  = render 'form'
 
-= link_to 'Back', stories_path
+  = link_to 'Back', stories_path
