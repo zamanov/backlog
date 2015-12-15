@@ -1,22 +1,27 @@
+%h1 The Story
+%p
+%table{:class =>  "backlog_table"}
+  %th{:class => "backlog_table_head"}
 
+    %b ID:
+    = @story.id
+  %th
+    %b Name:
+    = @story.name
+  %th
+    %b Priority:
+    = @story.rank
+  %th
+    %b Mark:
+    = @story.points
+  %th
+    %b Way of demonstration:
+    = @story.title
+  %th
+    %b Notes:
+    = @story.notes
 %p
-  %b ID:
-  = @story.id
 %p
-  %b Name:
-  = @story.name
-%p
-  %b Rank:
-  = @story.rank
-%p
-  %b Points:
-  = @story.points
-%p
-  %b Title:
-  = @story.title
-%p
-  %b Notes:
-  = @story.notes
 - if can? :update, @story
   = link_to 'Edit', edit_story_path(@story)
 - if can? :destroy, @story

@@ -8,7 +8,9 @@
           %td{:class => "title1"} scrum backlog
           %td{:class => "title1"} burndown diagram
     .backlog_buttons
-      %image{:class => "add_picture", :name => "add", :src => "http://upload.akusherstvo.ru/image899656.jpg"}
+      - if can? :create, Story
+        = link_to 'New Story', new_story_path
+        %image{:class => "add_picture", :name => "add", :src => "http://upload.akusherstvo.ru/image899656.jpg"}
       %image{:class => "delete_picture", :name => "delete", :src => "http://upload.akusherstvo.ru/image899657.jpg"}
       %img{:class => "edit_picture", :name => "edit", :src => "http://upload.akusherstvo.ru/image899658.jpg"}
       %img{:class => "split_picture", :name => "split", :src => "http://upload.akusherstvo.ru/image899659.jpg"}
@@ -39,5 +41,3 @@
           %td{:class => "backlog_table_cell"}= link_to 'Show', story
 
       %br
-        - if can? :create, Story
-          = link_to 'New Story', new_story_path
