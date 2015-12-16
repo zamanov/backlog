@@ -20,7 +20,7 @@
         %td= story.points
         %td= story.title
         %td= story.notes
-        %td= link_to image_tag ('show.png'), story
+        %td= link_to image_tag('show.png'), story_path(story)
 %br
 - if can? :create, Story
   = link_to 'New Story', new_story_path

@@ -23,6 +23,7 @@
 html{
 	position:relative;	
 	margin: 0;
+	background-color:#0E1F43;
 }
 
 body{

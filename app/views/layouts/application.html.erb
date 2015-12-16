@@ -14,21 +14,18 @@
 	
     <div class = "current_user">
       <% if user_signed_in? %>	    
-      	<p>Signed in as</p>
-      	<%=current_user.email %>	
+      	<p><font size="4" face="Arial" color=#A9E2F3>Signed in as
+      	<%=current_user.name %></font>
+	<%= link_to image_tag("exit.png"), destroy_user_session_path, :method => :delete %>
+	</p>
+      <% else %>
+	<%= link_to image_tag("signin.png"), new_user_session_path %>	
       <% end %>	
     </div>		
 
     <div class="content"> 
 
-      <div class="menu"> 
-        <% if user_signed_in? %>
-          <p class = "first"><%= link_to image_tag("edit.png"), edit_user_registration_path %></p>
-          <p class = "second"><%= link_to image_tag("exit.png"), destroy_user_session_path, :method => :delete %></p>
-        <% else %>
-          <p class = "first"><%= link_to image_tag("signup.png"), new_user_registration_path %></p> 
-	  <p class = "second"><%= link_to image_tag("signin.png"), new_user_session_path %></p>
-        <% end %>
+      <div class="menu">
 
         <% flash.each do |name, msg| %>
           <%= content_tag :div, msg, id: "flash_#{name}" %>

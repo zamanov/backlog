@@ -7,14 +7,18 @@ table {
 	width: 100%;
 }
 
+table td{
+	font-size: 15px;
+}
+
 table tr,th{
 	text-align: center;
 	color: #0E1F43;
 	font-family: "Verdana", sanf-selif;
 	height: 75px;
+	bordercolor: red;
+	boreder: 1;
 }
 
-table td{
-	font-size: 15px;
-}
+
 
