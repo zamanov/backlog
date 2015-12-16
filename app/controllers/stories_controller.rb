@@ -27,7 +27,7 @@ class StoriesController < ApplicationController
   def split
     @hash = []
     2.times do
-      @hash << Story.dup
+      @hash << @story.dup
     end
   end
 

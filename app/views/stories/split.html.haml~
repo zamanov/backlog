@@ -1,8 +1,8 @@
 %h1 Spliting story
-%br
+
 = render 'form2'
 
-%br
+
 = link_to 'Show', @story
 \|
 = link_to 'Back', stories_path

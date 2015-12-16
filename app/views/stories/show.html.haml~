@@ -17,11 +17,14 @@
 %p
   %b Notes:
   = @story.notes
-- if can? :update, story
+- if can? :update, @story
+  \|
   = link_to 'Edit', edit_story_path(@story)
-- if can? :destroy, story
+- if can? :destroy, @story
+  \|
   = link_to 'Destroy', @story, :method => :delete
-- if can? :share, story
+- if can? :share, @story
+  \|
   = link_to 'Split', split_story_path(@story)
 \|
 = link_to 'Back', stories_path

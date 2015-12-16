@@ -5,10 +5,11 @@
 
 table {
 	width: 100%;
+	table-layout: fixed;
 }
 
 table td{
-	font-size: 15px;
+	font-size: 18px;
 }
 
 table tr,th{
@@ -18,5 +19,12 @@ table tr,th{
 	height: 75px;
 }
 
+form{
+	background-color:#0E1F43;
+	width: 200px;
+}
+textarea{
+	height: 60px;
+}
 
 

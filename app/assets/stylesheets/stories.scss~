@@ -5,10 +5,11 @@
 
 table {
 	width: 100%;
+	table-layout: fixed;
 }
 
 table td{
-	font-size: 15px;
+	font-size: 18px;
 }
 
 table tr,th{
@@ -16,9 +17,18 @@ table tr,th{
 	color: #0E1F43;
 	font-family: "Verdana", sanf-selif;
 	height: 75px;
-	bordercolor: red;
-	boreder: 1;
 }
 
+form{
+	background-color:#0E1F43;
+	width: 200px;
+}
+#form2{
+	column-count:2;
+	height: 300px;
+}
+textarea{
+	height: 60px;
+}
 
 

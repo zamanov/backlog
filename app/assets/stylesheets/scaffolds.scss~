@@ -2,14 +2,12 @@ body {
   background-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 20px;
 }
 	
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 18px;
 }
 
 pre {
@@ -20,10 +18,10 @@ pre {
 
 a {
   font-size: 20px;	
-  color: #000;
-
+  color: #586E09;
+  text-decoration: none;
   &:visited {
-    color: #666;
+    color: #586E09;
   }
 
   &:hover {
@@ -54,7 +52,21 @@ div {
   display: table;
   font-size: 15px;
 }
-
+TABLE {
+    width: 300px; /* Ширина таблицы */
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+    border: 2px solid; /* Прячем рамку вокруг таблицы */
+    border-color: #058B87;
+   }
+TD, TH {
+    padding: 3px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid maroon; /* Параметры рамки */
+    text-align: center; /* Выравнивание по левому краю */
+   }
+#form2{
+	column-count:2;
+	height: 300px;
+}
 #error_explanation {
   width: 450px;
   border: 2px solid red;

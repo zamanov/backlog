@@ -23,5 +23,5 @@
             = p.label :notes
             %br/
             = p.text_field :notes
-  .actions2
+  .actions
     = submit_tag

@@ -1,26 +1,24 @@
 %h1 Listing stories
-
+%br
 %table
   %thead
     %tr
       %th{:class => "thead_title"} ID
       %th{:class => "thead_title"} Name
-      %th{:class => "thead_title"} Rank
+      %th{:class => "thead_title"} Priority
       %th{:class => "thead_title"} Points
       %th{:class => "thead_title"} Title
       %th{:class => "thead_title"} Notes
-      %th
 
   %tbody
     - @stories.each do |story|
       %tr
-        %td= story.id
+        %td= link_to story.id, story_path(story)
         %td= story.name
         %td= story.rank
         %td= story.points
         %td= story.title
         %td= story.notes
-        %td= link_to image_tag('show.png'), story_path(story)
 %br
 - if can? :create, Story
   = link_to 'New Story', new_story_path

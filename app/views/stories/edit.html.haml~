@@ -1,8 +1,7 @@
-%h1 Spliting story
+%h1 Editing story
 %br
-= render 'form2'
+= render 'form'
 
-%br
 = link_to 'Show', @story
-\|
+%br
 = link_to 'Back', stories_path

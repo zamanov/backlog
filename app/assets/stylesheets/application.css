@@ -29,7 +29,7 @@ body{
 	margin:0;
 	padding:0;
 	height:1350px;
-	background-color:#F4F4F4;
+	background-color:#058B87;
 }
 
 
@@ -85,7 +85,16 @@ body{
 	height:200px;
 	background-color:#0E1F43;	
 }
-
+.actions {
+	position:relative;
+        margin: -10px -20px; 
+	top: 50%;
+    	left: 50%;
+}
+.actions2 {
+	position:relative;
+        margin: -10px 50px; 
+}
 
 
 

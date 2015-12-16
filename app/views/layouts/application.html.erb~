@@ -9,17 +9,18 @@
 <body>
 
     <div class="header">
-      <%= image_tag("header.png", width: '100%') %>
+      <%= image_tag("header.png",  width: '100%') %>
     </div>	
 	
     <div class = "current_user">
       <% if user_signed_in? %>	    
-      	<p><font size="4" face="Arial" color=#D7DF01>Signed in as
+      	<p><font size="5" face="Arial" color=#A9E2F3>Signed in as
       	<%=current_user.name %></font>
-	<%= link_to image_tag("exit.png"), destroy_user_session_path, :method => :delete %>
 	</p>
+	<%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+	
       <% else %>
-	<%= link_to image_tag("signin.png"), new_user_session_path %>	
+	<%= link_to 'Sign in', new_user_session_path %>	
       <% end %>	
     </div>		
 
