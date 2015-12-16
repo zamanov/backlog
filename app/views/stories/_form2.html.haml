@@ -1,28 +1,26 @@
 = form_tag do
   - @hash.each do |story|
-    %table{:class =>  "split_table"}
+
     = fields_for 'stories_hash[]', story do |p|
-      %tr
-        %th.field
-          = p.label :Name
-          = p.text_field :name
-        %th.field
-          = p.label :Priority
-
-          = p.number_field :rank
-        %th.field
-          = p.label :Mark
-
-          = p.number_field :points
-        %th.field
-          = p.label :Way_of_demonstration
-
-          = p.text_field :title
-        %th.field
-          = p.label :Notes
-
-          = p.text_field :notes
-      %tr
-  %p
+      .field
+        = p.label :name
+        %br/
+        = p.text_field :name
+      .field
+        = p.label :rank
+        %br/
+        = p.number_field :rank
+      .field
+        = p.label :points
+        %br/
+        = p.number_field :points
+      .field
+        = p.label :title
+        %br/
+        = p.text_field :title
+      .field
+        = p.label :notes
+        %br/
+        = p.text_field :notes
   .actions
     = submit_tag

@@ -1,15 +1,14 @@
 %h1 Listing stories
-%link{:href => "css/style.css",:rel => :stylesheet, :type => :"text/css"}
-%table{:class => "backlog_table"}
-  %thead{:class => "backlog_head"}
+
+%table
+  %thead
     %tr
-      %th{:class => "backlog_table_hide"}
-      %th{:class => "backlog_table_head"} ID
-      %th{:class => "backlog_table_head"} Name
-      %th{:class => "backlog_table_head"} Rank
-      %th{:class => "backlog_table_head"} Points
-      %th{:class => "backlog_table_head"} Title
-      %th{:class => "backlog_table_head"} Notes
+      %th{:class => "thead_title"} ID
+      %th{:class => "thead_title"} Name
+      %th{:class => "thead_title"} Rank
+      %th{:class => "thead_title"} Points
+      %th{:class => "thead_title"} Title
+      %th{:class => "thead_title"} Notes
       %th
 
   %tbody
@@ -21,7 +20,7 @@
         %td= story.points
         %td= story.title
         %td= story.notes
-        %td= link_to 'Show', story
+        %td= link_to image_tag ('show.png', story)
 %br
-- if can? : create, Story
+- if can? :create, Story
   = link_to 'New Story', new_story_path

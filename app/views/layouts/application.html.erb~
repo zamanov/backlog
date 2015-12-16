@@ -1,11 +1,49 @@
-<% if user_signed_in? %>
-  Signed in as <%= current_user.email %>. Not you?
-  <%= link_to "Edit profile", edit_user_registration_path %>
-  <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
-<% end %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Store</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
 
-<% flash.each do |name, msg| %>
-  <%= content_tag :div, msg, id: "flash_#{name}" %>
-<% end %>
+    <div class="header">
+      <%= image_tag("header.png", width: '100%') %>
+    </div>	
+	
+    <div class = "current_user">
+      <% if user_signed_in? %>	    
+      	<p>Signed in as</p>
+      	<%=current_user.email %>	
+      <% end %>	
+    </div>		
+
+    <div class="content"> 
+
+      <div class="menu"> 
+        <% if user_signed_in? %>
+          <p class = "first"><%= link_to image_tag("edit.png"), edit_user_registration_path %></p>
+          <p class = "second"><%= link_to image_tag("exit.png"), destroy_user_session_path, :method => :delete %></p>
+        <% else %>
+          <p class = "first"><%= link_to image_tag("signup.png"), new_user_registration_path %></p> 
+	  <p class = "second"><%= link_to image_tag("signin.png"), new_user_session_path %></p>
+        <% end %>
+
+        <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg, id: "flash_#{name}" %>
+        <% end %>
+      </div>	
+
+      <div class="info">
+      	<%= yield %>
+      </div>
+    </div>
+
+    <div class="footer">
+      <%= image_tag("footer.png", width: '100%') %>
+    </div>
+	
+ 
+</body>
+</html>

@@ -7,10 +7,6 @@ table {
 	width: 100%;
 }
 
-table td{
-	font-size: 15px;
-}
-
 table tr,th{
 	text-align: center;
 	color: #0E1F43;
@@ -18,5 +14,7 @@ table tr,th{
 	height: 75px;
 }
 
-
+table td{
+	font-size: 15px;
+}
 
